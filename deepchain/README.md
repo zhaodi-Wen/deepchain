@@ -107,5 +107,5 @@
 				compared grups :
 						group1  (using single data set)  : 0.9621
 						group2  (using full data set)    : 0.9837
-#usage
+# usage
 In windows10 or ubuntu16.04 run :python ./run_mnist.py
