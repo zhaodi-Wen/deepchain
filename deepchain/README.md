@@ -15,7 +15,7 @@
         training:
           4 workers:
 		         1.
-		            4 workers: 13750 pictures for each
+		            4 workers: 13750 pictures for each one
 
 		         2.
 		            compared group:
@@ -23,7 +23,7 @@
 					      group2 (using full data set): 55000 pictures
 		  10 workers:
 		        1.
-		            10 workers: 5500 pictures for each
+		            10 workers: 5500 pictures for each one
 
 		        2.
 		            compared group:
@@ -84,7 +84,7 @@
 				worker8: 0.9705
 				worker9: 0.9728
 				worker10: 0.9681
-				compared grups :
+				compared groups :
 						group1  (using single data set)  : 0.9644
 						group2  (using full data set)    : 0.9762
 
@@ -104,7 +104,7 @@
 				worker2: 0.9733
 				worker3: 0.9710
 				worker4: 0.9720
-				compared grups :
+				compared groups :
 						group1  (using single data set)  : 0.9621
 						group2  (using full data set)    : 0.9837
 # usage
