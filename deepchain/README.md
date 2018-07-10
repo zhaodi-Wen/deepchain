@@ -1,16 +1,16 @@
-#environment:
+# environment:
  - Python 3.6.4 |Anaconda
  - numpy      = 1.14.0
  - tensorflow = 1.7.0
 
-tools:
+# tools:
 - sublime text3
 - pycharm = 2018.1.3
 - Ubuntu  = 16.04 or Windows10
 
-compiled language:
+# compiled language:
 - Python = 3.6.4
-dataset:
+# dataset:
 - MNIST
         training:
           4 workers:
@@ -33,7 +33,7 @@ dataset:
         validation: 5000 pictures
         test:       10000 pictures
 
-network:
+# network:
          training model:
 
                 Input ->  Conv layer(3x3)->  Maxpool layer(2x2)-> Fully_connected layer -> Output layer
@@ -45,7 +45,7 @@ network:
                 output layer:               (128,10)
 
 
-parameter config:
+# parameter config:
                   iteration :             1500
                   epoch :                 1
                   learning rate :         0.5
@@ -56,7 +56,7 @@ parameter config:
                   fully connected layer : W2 = (1960,128)  b2 = (1,128)
                   output layer :          W3 = (128,10)    b3 = (1,10）
 
-result:
+# result:
     worker_num: 10
 	    accuracy:
 		    training(validation):
@@ -107,3 +107,5 @@ result:
 				compared grups :
 						group1  (using single data set)  : 0.9621
 						group2  (using full data set)    : 0.9837
+#usage
+In windows10 or ubuntu16.04 run :python ./run_mnist.py
