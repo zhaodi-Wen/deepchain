@@ -1,69 +1,109 @@
-# hipsternet
-All the hipster things in Neural Net in a single repo: hipster optimization algorithms, hispter regularizations, everything!
+#environment:
+ - Python 3.6.4 |Anaconda
+ - numpy      = 1.14.0
+ - tensorflow = 1.7.0
 
-Note, things will be added over time, so not all the hipsterest things will be here immediately. Also don't use this for your production code: use this to study and learn new things in the realm of Neural Net, Deep Net, Deep Learning, whatever.
+tools:
+- sublime text3
+- pycharm = 2018.1.3
+- Ubuntu  = 16.04 or Windows10
 
-## What's in it?
+compiled language:
+- Python = 3.6.4
+dataset:
+- MNIST
+        training:
+          4 workers:
+		         1.
+		            4 workers: 13750 pictures for each
 
-#### Network Architectures
+		         2.
+		            compared group:
+					      group1 (using single data set): 13750 pictures
+					      group2 (using full data set): 55000 pictures
+		  10 workers:
+		        1.
+		            10 workers: 5500 pictures for each
 
-1. Convolutional Net
-2. Feed Forward Net
-3. Recurrent Net
-4. LSTM Net
-5. GRU Net
+		        2.
+		            compared group:
+					      group1 (using single data set): 5500 pictures
+					      group2 (using full data set): 55000 pictures
 
-#### Optimization algorithms
+        validation: 5000 pictures
+        test:       10000 pictures
 
-1. SGD
-2. Momentum SGD
-3. Nesterov Momentum
-4. Adagrad
-5. RMSprop
-6. Adam
+network:
+         training model:
 
-#### Loss functions
+                Input ->  Conv layer(3x3)->  Maxpool layer(2x2)-> Fully_connected layer -> Output layer
 
-1. Cross Entropy
-2. Hinge Loss
-3. Squared Loss
-4. L1 Regression
-5. L2 Regression
+                input image shape:          (1,1,28,28)(1: picture num,1: deepth,28: length ,28: width)
+	            affer conv image shape:     (10,1,28,28)
+                after max pool image shape: (10,1,14,14)
+  	            fully connected layer:      (1960,128)
+                output layer:               (128,10)
 
-#### Regularization
 
-1. Dropout
-2. Your usual L1 and L2 regularization
+parameter config:
+                  iteration :             1500
+                  epoch :                 1
+                  learning rate :         0.5
+                  Worker_NUM :            4
+                  mini_batch_size :       64
+                  optimizer function:     stochastic gradient descent
+                  conv layer :            W1 = (10,1,3,3)  b1 =(10,1)
+                  fully connected layer : W2 = (1960,128)  b2 = (1,128)
+                  output layer :          W3 = (128,10)    b3 = (1,10）
 
-#### Nonlinearities
+result:
+    worker_num: 10
+	    accuracy:
+		    training(validation):
+				worker1: 0.968000
+				worker2: 0.969800
+				worker3: 0.973400
+				worker4: 0.972200
+				worker5: 0.974200
+				worker6: 0.969200
+				worker7: 0.966800
+				worker8: 0.971400
+				worker9: 0.971400
+				worker10: 0.970200
+		        compared groups:
+						  group1 (using single data set) : 0.966000
+						  group2 (using full data set)   : 0.975800
+		    testing:
+				worker1: 0.9677
+				worker2: 0.9687
+				worker3: 0.9701
+				worker4: 0.9706
+				worker5: 0.9703
+				worker6: 0.9654
+				worker7: 0.9658
+				worker8: 0.9705
+				worker9: 0.9728
+				worker10: 0.9681
+				compared grups :
+						group1  (using single data set)  : 0.9644
+						group2  (using full data set)    : 0.9762
 
-1. ReLU
-2. leaky ReLU
-3. sigmoid
-4. tanh
 
-#### Hipster techniques
-
-1. BatchNorm
-2. Xavier weight initialization
-
-#### Pooling
-
-1. Max pooling
-2. Average pooling
-
-## How to run this?
-
-1. Install miniconda <http://conda.pydata.org/miniconda.html>
-2. Do `conda env create`
-3. Enter the env `source activate hipsternet`
-4. [Optional] To install Tensorflow: `chmod +x tensorflow.sh; ./tensorflow.sh`
-5. Do things with the code if you want to
-6. To run the example:
-  1. `python run_mnist.py {ff|cnn}`; `cnn` for convnet model, `ff` for the feed forward model
-  2. `python run_rnn.py {rnn|lstm|gru}`; `rnn` for vanilla RNN model, `lstm` for LSTM net model, `gru` for GRU net model
-7. Just close the terminal if you done (or `source deactivate`, not a fan though)
-
-## What can I do with this?
-
-Do anything you want. I licensed this with Unlicense License <http://unlicense.org>, as I need to take a break of using WTFPL license.
+	worker_num: 4
+		accuracy:
+		training(validation):
+				worker1: 0.970800
+				worker2: 0.969600
+				worker3: 0.972000
+				worker4: 0.973200
+		        compared groups:
+						  group1 (using single data set) : 0.963600
+						  group2 (using full data set)   : 0.981800
+		testing:
+				worker1: 0.9674
+				worker2: 0.9733
+				worker3: 0.9710
+				worker4: 0.9720
+				compared grups :
+						group1  (using single data set)  : 0.9621
+						group2  (using full data set)    : 0.9837
