@@ -114,7 +114,7 @@ def sgd3(nn, X_train, y_train,worker_num ,val_set=None, alpha=1e-3, mb_size=256,
                 else:
                     print('Iter-{} loss: {:.4f}'.format(iter, loss))
                     print('grad:',grad)
-                if(k+1==10):
+                if(k+1==worker_num):
                     print('Iter-{} average loss:{} loss: {:.4f} '.format(iter,k+1 ,sum(loss)/len(loss)))
                     f[k].write('Iter-{} average loss:{} loss: {:.4f} '.format(iter,k+1 ,sum(loss)/len(loss)))
 
