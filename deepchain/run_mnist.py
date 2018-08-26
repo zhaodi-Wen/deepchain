@@ -132,7 +132,7 @@ if __name__ == '__main__':
         '''
         #multi worker
         net = []
-        for i in range(10):
+        for i in range(worker_num):
             if net_type == 'ff':
                 net.append(nn.FeedForwardNet(D, C, H=128, lam=reg, p_dropout=p_dropout, loss=loss, nonlin=nonlin))
                 net1 = nn.FeedForwardNet(D, C, H=128,lam=reg,p_dropout=p_dropout,loss = loss,nonlin = nonlin)
