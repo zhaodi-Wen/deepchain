@@ -6,7 +6,7 @@
 # tools:
 - sublime text3
 - pycharm = 2018.1.3
-- Ubuntu  = 16.04 or Windows10
+- Windows10
 
 # compiled language:
 - Python = 3.6.4
@@ -108,4 +108,4 @@
 						group1  (using single data set)  : 0.9621
 						group2  (using full data set)    : 0.9837
 # usage
-In windows10 or ubuntu16.04 run :python ./run_mnist.py
+In windows10 run :python ./run_mnist.py
