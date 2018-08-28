@@ -6,7 +6,7 @@
 # tools:
 - sublime text3
 - pycharm = 2018.1.3
-- Ubuntu  = Windows10
+- Windows10
 
 # compiled language:
 - Python = 3.6.4
