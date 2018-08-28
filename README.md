@@ -108,4 +108,4 @@
 						group1  (using single data set)  : 0.9621
 						group2  (using full data set)    : 0.9837
 # usage
-In windows10 run :python ./run_mnist.py
+n windows10 run :python ./run_mnist.py
